@@ -49,18 +49,6 @@ Key environment variables (all optional, see `backend/src/main/resources/applica
 | `OLLAMA_BASE_URL`, `OLLAMA_MODEL` | Local Ollama endpoint/model for prediction narratives |
 | `CORS_ALLOWED_ORIGINS` | Defaults to `http://localhost:5173` (the Vite dev server) |
 
-### A note on this machine's Maven/npm setup
-
-This machine's default `~/.m2/settings.xml` mirrors all Maven traffic to a corporate Artifactory
-(`vitech.artifactorygold.repo`), and npm is configured similarly. While building this project in
-this session's sandbox, that corporate proxy returned `403 Forbidden` for the public Spring Boot
-artifacts (most likely because the sandbox isn't on the corporate VPN/IP allowlist) - direct
-access to Maven Central worked fine from the same sandbox. Because of that, **the backend could
-not be compiled or test-run in this session** - the code was written and manually reviewed, but
-not built. On your own machine, if you're on the corporate VPN, `mvn spring-boot:run` may just
-work as-is; if you hit the same 403, you'll need either VPN access, a working corporate proxy
-entry for these artifacts, or a `-s` settings override pointed at Maven Central for local dev.
-The same caveat applies to `npm install` for the frontend (same corporate registry).
 
 ## Frontend
 
