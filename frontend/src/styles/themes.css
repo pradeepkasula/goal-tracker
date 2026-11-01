@@ -1,0 +1,131 @@
+/*
+ * Theming model: two independent attributes on <html>.
+ *   data-theme = color palette ("default" | "ocean" | "forest" - add more here)
+ *   data-mode  = "light" | "dark"
+ * Every component reads only these CSS variables, never a literal color, so adding a palette or
+ * toggling dark mode never requires touching component code.
+ */
+
+:root,
+:root[data-theme="default"][data-mode="light"] {
+  --color-bg: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-text: #1a1d23;
+  --color-text-muted: #5b6270;
+  --color-border: #e1e4e9;
+  --color-primary: #3a5bd9;
+  --color-primary-text: #ffffff;
+  --color-accent: #6a4c93;
+  --color-success: #1f9254;
+  --color-warning: #b4720a;
+  --color-danger: #c0392b;
+  --chart-1: #3a5bd9;
+  --chart-2: #2e86ab;
+  --chart-3: #6a4c93;
+  --chart-4: #1f9254;
+  --chart-5: #b4720a;
+  --chart-6: #c0392b;
+}
+
+:root[data-theme="default"][data-mode="dark"] {
+  --color-bg: #14161a;
+  --color-surface: #1d2025;
+  --color-surface-raised: #242830;
+  --color-text: #e9eaee;
+  --color-text-muted: #9aa0ad;
+  --color-border: #2d3138;
+  --color-primary: #7c94ef;
+  --color-primary-text: #0f1115;
+  --color-accent: #b79ce0;
+  --color-success: #4fce8a;
+  --color-warning: #e3a73f;
+  --color-danger: #e2695c;
+  --chart-1: #7c94ef;
+  --chart-2: #6cc3e0;
+  --chart-3: #b79ce0;
+  --chart-4: #4fce8a;
+  --chart-5: #e3a73f;
+  --chart-6: #e2695c;
+}
+
+:root[data-theme="ocean"][data-mode="light"] {
+  --color-bg: #f1f8fa;
+  --color-surface: #ffffff;
+  --color-surface-raised: #ffffff;
+  --color-text: #0f2a33;
+  --color-text-muted: #4c6b73;
+  --color-border: #d6e8ec;
+  --color-primary: #0f7ea0;
+  --color-primary-text: #ffffff;
+  --color-accent: #0a5c78;
+  --color-success: #1f9254;
+  --color-warning: #b4720a;
+  --color-danger: #c0392b;
+  --chart-1: #0f7ea0;
+  --chart-2: #38b6c4;
+  --chart-3: #0a5c78;
+  --chart-4: #1f9254;
+  --chart-5: #b4720a;
+  --chart-6: #c0392b;
+}
+
+:root[data-theme="ocean"][data-mode="dark"] {
+  --color-bg: #0a1619;
+  --color-surface: #0f2025;
+  --color-surface-raised: #152a30;
+  --color-text: #e2f1f4;
+  --color-text-muted: #86a7ae;
+  --color-border: #1e3338;
+  --color-primary: #4fc7e0;
+  --color-primary-text: #06171a;
+  --color-accent: #7fd8e8;
+  --color-success: #4fce8a;
+  --color-warning: #e3a73f;
+  --color-danger: #e2695c;
+  --chart-1: #4fc7e0;
+  --chart-2: #7fd8e8;
+  --chart-3: #2f8fb0;
+  --chart-4: #4fce8a;
+  --chart-5: #e3a73f;
+  --chart-6: #e2695c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-mode="light"]):not([data-mode="dark"]) {
+    --color-bg: #14161a;
+    --color-surface: #1d2025;
+    --color-surface-raised: #242830;
+    --color-text: #e9eaee;
+    --color-text-muted: #9aa0ad;
+    --color-border: #2d3138;
+    --color-primary: #7c94ef;
+    --color-primary-text: #0f1115;
+    --color-accent: #b79ce0;
+    --color-success: #4fce8a;
+    --color-warning: #e3a73f;
+    --color-danger: #e2695c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+a {
+  color: var(--color-primary);
+}

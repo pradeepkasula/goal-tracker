@@ -1,0 +1,73 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------< com.goaltracker:goal-tracker-backend >----------------
+[INFO] Building goal-tracker-backend 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.3.5:run (default-cli) > test-compile @ goal-tracker-backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ goal-tracker-backend ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ goal-tracker-backend ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ goal-tracker-backend ---
+[INFO] skip non existing resourceDirectory C:\Users\Pradee913128\code\practice\goal-tracker\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ goal-tracker-backend ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.3.5:run (default-cli) < test-compile @ goal-tracker-backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.3.5:run (default-cli) @ goal-tracker-backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.5)
+
+2026-10-31T23:50:25.282+05:30  INFO 5620 --- [goal-tracker-backend] [           main] com.goaltracker.GoalTrackerApplication   : Starting GoalTrackerApplication using Java 17.0.18 with PID 5620 (C:\Users\Pradee913128\code\practice\goal-tracker\backend\target\classes started by Pradee913128 in C:\Users\Pradee913128\code\practice\goal-tracker\backend)
+2026-10-31T23:50:25.286+05:30  INFO 5620 --- [goal-tracker-backend] [           main] com.goaltracker.GoalTrackerApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-10-31T23:50:26.029+05:30  INFO 5620 --- [goal-tracker-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-31T23:50:26.210+05:30  INFO 5620 --- [goal-tracker-backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 174 ms. Found 11 JPA repository interfaces.
+2026-10-31T23:50:26.827+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-10-31T23:50:26.841+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-31T23:50:26.841+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-10-31T23:50:26.907+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-10-31T23:50:26.909+05:30  INFO 5620 --- [goal-tracker-backend] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1576 ms
+2026-10-31T23:50:27.215+05:30  INFO 5620 --- [goal-tracker-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-31T23:50:27.442+05:30  INFO 5620 --- [goal-tracker-backend] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@274fdea6
+2026-10-31T23:50:27.445+05:30  INFO 5620 --- [goal-tracker-backend] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-31T23:50:27.539+05:30  INFO 5620 --- [goal-tracker-backend] [           main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/goaltracker (PostgreSQL 17.5)
+2026-10-31T23:50:27.561+05:30  WARN 5620 --- [goal-tracker-backend] [           main] o.f.c.internal.database.base.Database    : Flyway upgrade recommended: PostgreSQL 17.5 is newer than this version of Flyway and support has not been tested. The latest supported version of PostgreSQL is 16.
+2026-10-31T23:50:27.653+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.f.core.internal.command.DbValidate     : Successfully validated 5 migrations (execution time 00:00.070s)
+2026-10-31T23:50:27.683+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 5
+2026-10-31T23:50:27.689+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-10-31T23:50:27.865+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-10-31T23:50:27.987+05:30  INFO 5620 --- [goal-tracker-backend] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-10-31T23:50:28.069+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-10-31T23:50:28.671+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-31T23:50:31.267+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-31T23:50:31.372+05:30  INFO 5620 --- [goal-tracker-backend] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-31T23:50:32.446+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-31T23:50:34.009+05:30  WARN 5620 --- [goal-tracker-backend] [           main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dc3ccdb4-8803-45f1-9135-2d97d4b97b48
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-10-31T23:50:34.026+05:30  INFO 5620 --- [goal-tracker-backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-10-31T23:50:34.622+05:30  INFO 5620 --- [goal-tracker-backend] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-10-31T23:50:34.642+05:30  INFO 5620 --- [goal-tracker-backend] [           main] com.goaltracker.GoalTrackerApplication   : Started GoalTrackerApplication in 9.822 seconds (process running for 10.251)
+2026-10-31T23:51:17.540+05:30  WARN 5620 --- [goal-tracker-backend] [nio-8080-exec-8] c.goaltracker.service.AiInsightService   : AI narrative unavailable for track 'Java' (falling back to stats-only): I/O error on POST request for "http://localhost:11434/api/chat": Connection refused: connect
+2026-10-31T23:57:54.549+05:30  WARN 5620 --- [goal-tracker-backend] [nio-8080-exec-5] c.goaltracker.service.AiInsightService   : AI narrative unavailable for track 'System Design' (falling back to stats-only): I/O error on POST request for "http://localhost:11434/api/chat": Connection refused: connect
+2026-10-31T23:57:54.549+05:30  WARN 5620 --- [goal-tracker-backend] [nio-8080-exec-7] c.goaltracker.service.AiInsightService   : AI narrative unavailable for track 'AI' (falling back to stats-only): I/O error on POST request for "http://localhost:11434/api/chat": Connection refused: connect
